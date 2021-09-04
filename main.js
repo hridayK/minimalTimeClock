@@ -12,11 +12,13 @@ function showTime(){
     var diplaySeconds = document.getElementById("seconds");
     var diplayMode = document.getElementById("mode");
 
-    if(hours>12){
+    if(hours<12){
+        mode="AM";
+    }else if(hours>12){
         mode="PM";
         hours=hours-12;
-    }else{
-        mode="AM";
+    }else if(hours==12){
+        mode="PM";
     }
 
     if(hours<10)
